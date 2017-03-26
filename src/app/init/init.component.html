@@ -1,0 +1,14 @@
+<form (submit)="searchISIN()" class="form-horizontal">
+<label for="isin" class="control-label">Key</label>
+<div class="input-group">
+  <div class="input-group-addon">#</div>
+  <input class ="form-control" placeholder="Enter ISIN" type="text" name ="isin" [(ngModel)]="isin" >
+</div>
+</form>
+<p *ngIf="showNoNews">No Trending News Found!</p>
+<div *ngIf="showNews">
+  <app-news [newsOutput]="posts"></app-news> 
+</div>
+
+
+
